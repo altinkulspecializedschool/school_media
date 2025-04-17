@@ -288,3 +288,10 @@
       grid-template-columns: 1fr;
     }
   }
+
+  /* Simple Logo Styles */
+.logo {
+  height: 100px; /* Adjust this to change size */
+  margin: -10px;
+  width: 100px;
+}
