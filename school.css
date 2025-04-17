@@ -1,0 +1,298 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --text: #333;
+    --gray: #95a5a6;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #f9f9f9;
+  }
+  
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* ===== COMMON SECTION STYLES ===== */
+  main {
+    min-height: 80vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+  }
+  
+  /* ===== NEWS PAGE ===== */
+  .news-feed {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .news-content {
+    padding: 1.5rem;
+  }
+  
+  .date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    color: var(--secondary);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  /* ===== CREATIVE WRITING PAGE ===== */
+  .writing-gallery {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .writing-piece {
+    background: white;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .author {
+    color: var(--gray);
+    font-style: italic;
+  }
+  
+  .writing-content {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  
+  .read-full {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .read-full:hover {
+    background: var(--primary);
+  }
+  
+  /* ===== STUDENT SUCCESS PAGE ===== */
+  .achievements {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .achievement-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .badge {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    opacity: 0.1;
+  }
+  
+  .student {
+    color: var(--secondary);
+    font-weight: bold;
+  }
+  
+  .quote {
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  /* ===== ARTICLES PAGE ===== */
+  .article-archive {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .article-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .category-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .article-meta {
+    display: flex;
+    gap: 1rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .download-btn:hover {
+    background: var(--secondary);
+  }
+  
+  /* ===== INTERVIEWS PAGE ===== */
+  .interview-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .interview-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .interview-card video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .interview-content {
+    padding: 1rem;
+  }
+  
+  .interviewee {
+    color: var(--secondary);
+    font-weight: bold;
+    margin: 0.25rem 0;
+  }
+  
+  .video-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+  }
+  
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 768px) {
+    nav ul {
+      gap: 0.5rem;
+    }
+    
+    .interview-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Simple Logo Styles */
+.logo {
+  height: 100px; /* Adjust this to change size */
+  margin: 10px;
+  width: 100px;
+  border: 3px solid grey;
+}
