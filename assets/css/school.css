@@ -296,3 +296,115 @@
   width: 100px;
   border: 3px solid grey;
 }
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.highlight {
+  color: #f1c40f;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 2rem;
+  opacity: 0.9;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: #f1c40f;
+  color: #2c3e50;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Highlights Section */
+.latest-highlights {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.highlight-cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: #e74c3c;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .hero-features, .highlight-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature, .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
