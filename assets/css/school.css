@@ -408,3 +408,16 @@
     max-width: 300px;
   }
 }
+
+
+.simple-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-member {
+  padding: 1rem;
+  border-left: 3px solid #3498db;
+}
